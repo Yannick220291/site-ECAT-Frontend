@@ -26,7 +26,7 @@ const Header = () => {
         </span>
       </div>
 
-      {/* Bouton Se connecter (grand écran) - seul */}
+      {/* Boutons (grand écran) */}
       <div className="hidden md:flex space-x-4">
         <a
           href="/login"
@@ -34,19 +34,25 @@ const Header = () => {
         >
           Se connecter
         </a>
+        <a
+          href="/register"
+          className="px-4 py-2 rounded-lg bg-purple-600 text-white font-semibold hover:bg-purple-700 transition"
+        >
+          S’inscrire
+        </a>
       </div>
 
       {/* Hamburger menu (mobile) */}
       <div className="md:hidden">
         <button
           onClick={() => setMenuOpen(!menuOpen)}
-          className="text-red-600 focus:outline-none text-2xl"
+          className="text-purple-600 focus:outline-none text-2xl"
         >
           ☰
         </button>
       </div>
 
-      {/* Menu déroulant responsive — n'affiche que Se connecter */}
+      {/* Menu déroulant responsive */}
       {menuOpen && (
         <div className="absolute top-16 right-6 bg-white rounded-lg shadow-lg flex flex-col w-40">
           <a
@@ -55,7 +61,12 @@ const Header = () => {
           >
             Se connecter
           </a>
-          {/* Le lien "Créer un compte" a été retiré volontairement */}
+          <a
+            href="/register"
+            className="px-4 py-2 text-purple-700 font-semibold hover:bg-gray-100"
+          >
+            S’inscrire
+          </a>
         </div>
       )}
     </header>
