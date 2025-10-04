@@ -1,3 +1,5 @@
+"use client"; // <- obligatoire pour utiliser useState, useEffect, etc.
+
 import React, { useState } from "react";
 
 const LoginPage = () => {
